@@ -50,9 +50,10 @@ def viewac(crop):
     plt.show()
 
 def write_file(State_Name,District_Name,Crop_year,Season,Crop,Area,Production):
+    Crop_yeara  = int(Crop_year)
     wb = op.load_workbook("C:/Users/yasharth dubey/Downloads/CropsDataFile.xlsx")
     ws = wb.get_sheet_by_name("Sheet1")
-    ws.append([State_Name,District_Name,Crop_year,Season,Crop,Area,Production])
+    ws.append([State_Name,District_Name,Crop_yeara,Season,Crop,Area,Production])
     wb.save(filename = 'C:/Users/yasharth dubey/Downloads/CropsDataFile.xlsx')
     wb.close()
 login = input("Type the login id:")
@@ -96,9 +97,9 @@ elif(flag == 0):
     print("LOGIN FAILED")
     option3 = input("do you want to login as user,YES or NO:")
     if(option3=="YES"):
-        option4 = input("Do you want to view by YEAR or CROP")
+        option4 = input("Do you want to view by YEAR or CROP:")
         if(option4 == "YEAR"):
-            year = input("enter the year you want to see:")
+            year = int(input("enter the year you want to see:"))
             vieway(year)
         elif(option4 == "CROP"):
             crop = input("enter the crop you want to see:")
