@@ -313,7 +313,7 @@ def loginAdmin():
                                 z5 = w5.get()
                                 z6 = w6.get()
                                 z7 = w7.get()
-                                if (z1 == " ") or (z2 == " ") or (z3 == " ") or (z4 == " ") or (z5 == " ") or (z6 == " ") or (z7 == " "):
+                                if (z1 == "") or (z2 == "") or (z3 == "") or (z4 == "") or (z5 == "") or (z6 == "") or (z7 == ""):
                                     tkinter.messagebox.showinfo(title="EMPTY SPACE",message="Please Fill the Details")
                                 else:
                                     wb = op.load_workbook("C:/Users/yasharth dubey/Downloads/CropsDataFile.xlsx")
